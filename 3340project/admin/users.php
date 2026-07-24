@@ -1,0 +1,5 @@
+<?php
+$pageTitle='Manage Users';require_once __DIR__.'/../config/database.php';require_once __DIR__.'/../includes/functions.php';requireAdmin();
+if(isset($_GET['toggle'])){$stmt=$pdo->prepare("UPDATE users SET status=IF(status='active','disabled','active') WHERE id=? AND role<>'admin'");$stmt->execute([(int)$_GET['toggle']]);redirect('/admin/users.php');}
+$users=$pdo->query("SELECT * FROM users ORDER BY created_at DESC")->fetchAll();require __DIR__.'/../includes/header.php';
+?><section class="section"><div class="container"><h1>User administration</h1><?php require __DIR__.'/_nav.php';?><div class="table-wrap"><table><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Action</th></tr><?php foreach($users as $u):?><tr><td><?=e($u['name'])?></td><td><?=e($u['email'])?></td><td><?=e($u['role'])?></td><td><?=e($u['status'])?></td><td><?php if($u['role']!=='admin'):?><a href="?toggle=<?=(int)$u['id']?>">Enable/disable</a><?php endif;?></td></tr><?php endforeach;?></table></div></div></section><?php require __DIR__.'/../includes/footer.php'; ?>
