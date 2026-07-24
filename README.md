@@ -1,5 +1,14 @@
 # AC Sneaker PHP/MySQL Project
 
+**Author:** Alan Chen
+
+**University:** University of Windsor
+
+**Course:** COMP3340 – Web Development
+
+---
+# AC Sneaker PHP/MySQL Project
+
 AC Sneaker is a full-stack sneaker catalogue and ordering website created for a university web-development project.
 
 ## Main features
