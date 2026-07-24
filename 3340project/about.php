@@ -1,3 +1,0 @@
-<?php $pageTitle='About AC Sneaker'; require __DIR__.'/includes/header.php'; ?>
-<section class="section"><div class="container"><h1>About AC Sneaker</h1><div class="panel card-body"><p>AC Sneaker is an online custom sneaker store created as a full-stack PHP and MySQL student project. The business case focuses on a catalogue of twenty footwear products, each with multiple colors and sizes. Customers can search the catalogue, compare products, calculate a custom quote, create an account, place orders, track order history, and contact support. Administrators can manage products, users, themes, support requests, and website status.</p></div></div></section>
-<?php require __DIR__.'/includes/footer.php'; ?>
