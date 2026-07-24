@@ -1,12 +1,3 @@
-/*
-COMP3340 Final Project
-
-AC Sneaker
-
-Author: Alan Chen
-
-University of Windsor
-*/
 # AC Sneaker PHP/MySQL Project
 
 AC Sneaker is a full-stack sneaker catalogue and ordering website created for a university web-development project.
